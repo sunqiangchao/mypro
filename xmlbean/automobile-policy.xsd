@@ -1,0 +1,44 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="automobile-policy">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="insurance-date" type="xs:dateTime"/>
+            <xs:element name="policyholder-information"
+                        type="policyholder-information" minOccurs="1"/>
+            <xs:element name="insured-vehicle"
+                        type="insured-vehicle" minOccurs="1"/>
+            <xs:element name="liability-coverage"
+                        type="liability-coverage" minOccurs="1"/>
+            <xs:element name="third-party-coverage"
+                        type="third-party-coverage"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="policyholder-information">
+      <xs:sequence>
+         <xs:element name="name" type="xs:string"/>
+         <xs:element name="social-security-number" type="xs:string"/>
+         <xs:element name="address" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="insured-vehicle">
+      <xs:sequence>
+      <xs:element name="year-of-manufacture" type="xs:string"/>
+         <xs:element name="make" type="xs:string"/>
+         <xs:element name="model" type="xs:string"/>
+         <xs:element name="price" type="xs:double"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="liability-coverage">
+      <xs:sequence>
+         <xs:element name="coverage-limit" type="xs:double"/>
+         <xs:element name="coverage-premium" type="xs:double"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="third-party-coverage">
+      <xs:sequence>
+         <xs:element name="coverage-limit" type="xs:double"/>
+         <xs:element name="coverage-premium" type="xs:double"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

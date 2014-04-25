@@ -1,0 +1,68 @@
+<!--
+Copyright 2004 The Apache Software Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ -->
+<project name="Any" default="build" basedir=".">
+	<!-- create dir-->
+	
+	
+	
+	<target name="test1">
+		<mkdir dir="test1"/>
+	</target>
+	<target name="test2" depends="test1">
+		<mkdir dir="test2"/>
+	</target>
+	<target name="build" depends="test1,test2">
+	</target>	
+	<!-- delete dir-->
+	<target name="deltest1">
+		<delete dir="test1"></delete>
+	</target>
+	<target name="deltest2">
+		<delete dir="test2"></delete>
+	</target>
+	<target name="delete" depends="deltest1,deltest2">
+		
+	</target>
+	
+	<target name="complie">
+		<javac srcdir="src"></javac>
+	</target>
+	
+	<target name="init">
+			<mkdir dir="test1"/>
+		</target>
+	<target name="javac" depends="init">
+		<javac srcdir="src" destdir="test1" includejavaruntime="true" classpath="."></javac>
+	</target>
+	<target name="java">
+		<java classname="test.Main">
+			<classpath>
+				<pathelement location="dist/test.jar"/>
+
+				<pathelement path="{java.class.path}"/>
+
+			</classpath>
+
+		</java>
+	
+	</target>
+	<taskdef name="xmlbean" classname="org.apache.xmlbeans.impl.tool.XMLBean" classpath="path/xbean.jar" />
+	<target name="xmlbean">
+		<xmlbean schema="schemas"  destfile="Schemas.jar"/>
+	</target>
+	
+	
+</project>

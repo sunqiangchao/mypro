@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<report xmlns="http://cinsa.com/report">
+	<!-- 报表 title -->
+	<report-title>
+		<!-- 页眉  -->
+		<header>
+			<style></style>
+			<logo-path>web/img/headerLogo.jpg</logo-path>
+			<description>this is report-header</description>
+		</header>
+		<!-- 页脚 -->
+		<footer>
+			<style></style>
+			<logo-path>web/img/headerLogo.jpg</logo-path>
+			<description>this is report-footer</description>
+		</footer>
+		
+		<!-- 封面 -->
+		<cover>
+			<style></style>
+			<logo-path>web/img/panelLogo.jpg</logo-path>
+			<description>this is report-cover</description>
+		</cover>
+	</report-title>
+	<!-- ~~~~~~~~~~~~~~~~正文内容~~~~~~~~~~~~~~~~~~~~~~ -->
+	<report-body>
+		<section>
+			<base-content>
+				<title></title>
+				<class-name></class-name>
+				<style></style>
+				<description></description>
+				</base-content>
+			<sub-section>
+					<title>sub section</title>
+					<class-name></class-name>
+					<style></style>
+					<description></description>
+			</sub-section>
+			
+			<paragraph>
+					<title>sssssssssssssss</title>
+					<style></style>
+					<description></description>
+			</paragraph>
+		</section>
+		
+	</report-body>
+</report>

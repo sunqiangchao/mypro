@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+	<xs:element name="automobile-policy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="insurance-date" type="xs:dateTime"></xs:element>
+				<xs:element name="policyholder-information">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string"></xs:element>
+							<xs:element name="social-security-number" type="xs:string"></xs:element>
+							<xs:element name="address" type="xs:string"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="insured-vehicle">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="year-of-manufacture" type="xs:string"></xs:element>
+							<xs:element name="make" type="xs:string"></xs:element>
+							<xs:element name="model" type="xs:string"></xs:element>
+							<xs:element name="price" type="xs:double"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="liability-coverage">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="coverage-limit" type="xs:double"></xs:element>
+							<xs:element name="coverage-premium" type="xs:double"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="third-party-coverage">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="coverage-limit" type="xs:double"></xs:element>
+							<xs:element name="coverage-premium" type="xs:double"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+<xs:schema></xs:schema>
